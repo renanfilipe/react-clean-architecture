@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import Footer from '@/presentation/components/footer/footer'
+import FormStatus from '@/presentation/components/form-status/form-status'
 import Input from '@/presentation/components/input/input'
 import Header from '@/presentation/components/login-header/login-header'
-import Spinner from '@/presentation/components/spinner/spinner'
 
 import Styles from './login-styles.scss'
 
@@ -19,14 +19,11 @@ const Login: React.FC = () => {
           Entrar
         </button>
         <span className={Styles.link}>Criar Conta</span>
-        <div className={Styles.errorWrap}>
-          <Spinner className={Styles.spinner} />
-          <span className={Styles.error}>Error</span>
-        </div>
+        <FormStatus />
       </form>
       <Footer />
     </div>
   )
 }
 
-export default Login
+export default memo(Login)

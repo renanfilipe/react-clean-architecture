@@ -4,7 +4,7 @@ import Logo from '@/presentation/components/logo/logo'
 
 import Styles from './login-header-styles.scss'
 
-const Spinner: React.FC = () => {
+const LoginHeader: React.FC = () => {
   return (
     <header className={Styles.header}>
       <Logo />
@@ -13,4 +13,4 @@ const Spinner: React.FC = () => {
   )
 }
 
-export default memo(Spinner)
+export default memo(LoginHeader)
